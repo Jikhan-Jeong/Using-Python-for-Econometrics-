@@ -21,12 +21,10 @@ def data_summary(df):
 def stat_ols(formulas,df,subset=None, drop_cols=None):  
      '''
      Name: Jikhan Jeong  
-     * Simpler ols   
-     * Requires: import statsmodels.formula.api as smf  
      '''
      reg = smf.ols(formulas, df,subset=None, drop_cols=None)  
      results = reg.fit()  
      print(results.summary())  
      return results  
 
-# (ex) stat_ols('lwage ~y85*(educ+female) + exper + I((exper**2)/100) + union', data)  
+(ex) stat_ols('lwage ~y85*(educ+female) + exper + I((exper**2)/100) + union', data)    
