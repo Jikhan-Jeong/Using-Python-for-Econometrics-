@@ -18,11 +18,8 @@ def data_summary(df):
     print(df.columns)  
     return df.head(3)  
 
-def stat_ols(formulas,df,subset=None, drop_cols=None):  
-     '''
-     Name: Jikhan Jeong  
-     '''
-     reg = smf.ols(formulas, df,subset=None, drop_cols=None)  
+def stat_ols(formulas,df,subset=None, drop_cols=None):    
+     reg = smf.ols(formulas, df,subset=None, drop_cols=None)    
      results = reg.fit()  
      print(results.summary())  
      return results  
